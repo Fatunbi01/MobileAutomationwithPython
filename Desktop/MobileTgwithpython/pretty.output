@@ -1,0 +1,13 @@
+Feature: Send Email via Gmail App # features/gmailsend.feature:17
+  As a user
+  I want to send an email through the Gmail app
+  So that I can test email functionality
+  Scenario: Send test email to yfatunbi@gmail.com         # features/gmailsend.feature:22
+    Given I open the Gmail application                    # features/steps/gmail_test.py:7
+    When I compose a new email                            # features/steps/gmail_test.py:20
+    And I enter "yfatunbi@gmail.com" as recipient         # features/steps/gmail_test.py:29
+    And I enter "Gmail Test" as subject                   # features/steps/gmail_test.py:41
+    And I enter "This is an automated test email" as body # features/steps/gmail_test.py:50
+    Then I send the email                                 # features/steps/gmail_test.py:66
+    And I should see confirmation that email was sent     # features/steps/gmail_test.py:75
+
